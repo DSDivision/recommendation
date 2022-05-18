@@ -2,6 +2,8 @@
 
 Lorem lorem
 
+Clone the repo and create a virtual environment in python: https://docs.python.org/3/library/venv.html
+
 ```
 pip install -e .
 python run.py
