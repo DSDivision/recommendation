@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="includes/styles.css">
+    <link rel="icon" type="image/x-icon" href="https://c.tenor.com/GCpJBUm3YBQAAAAC/umm-confused.gif">
+    <title>Media Recomendation Tool</title>
+</head>
+<body>
+    <div class="main__container">
+        <div class="main__header">
+            <h1>Media Recommendation Tool</h1>
+            <h2>by DSDivision</h2>
+        </div>
+        <div class="main__content">
+            <div class="description">
+                This is a tool made for the course Industrial Training (ELEC-C7430) in Aalto University by DSDivision. The tool is a simple media recomendation tool that takes in genres and gives recomendations based on the selected genres.
+            </div>
+        </div>
+        <div class="main__content">
+            <div class="input-box">
+                <div>
+                    Enter the name of some movie
+                </div>
+                <form id="get-recomendations">
+                    <input type="text" id="title" placeholder="Movie title" class="movie-name-input">
+                    <button id="get-recomendations-btn" type="submit" value="Submit">Get recomendations</button>
+                </form>
+            </div>
+        </div>
+        <div class="main__content" id="loading__element">
+            <div>
+                <div id="loadingImg">
+                    <img src="includes/media/loading.svg" alt="loadingImg"></img>
+                </div>
+            </div>
+        </div>
+        <div class="main__content">
+            <h2>Results</h2>
+            <div id="results">
+                <div class="result">
+                    <div class="text">
+                        Your results will show here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="includes/script.js"></script>
+</body>
+</html>
