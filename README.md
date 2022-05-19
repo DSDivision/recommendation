@@ -8,4 +8,6 @@ Clone the repo and create a virtual environment in python: https://docs.python.o
 pip install -e .
 python run.py
 ```
-Access the site at localhost:8080 in your browser.
+Edit the correct device ip in the run.py file, and match the addresses in script.js
+
+Access the site at localhost:port in your browser, or device_ip:port in another device.
