@@ -56,7 +56,7 @@ function getR(e){
                             Genre: ${data[r].genre_ids}
                         </h3>
                         ${data[r].overview}
-                        <a href="${data[r].imdb_path}">IMDb</a>
+                        <a href="${data[r].imdb_path}" target="_blank">IMDb</a>
                         <div class="providers">
                 `;
                 for (var provider in data[r].providers){
