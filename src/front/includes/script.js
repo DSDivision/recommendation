@@ -56,7 +56,18 @@ function getR(e){
                             Genre: ${data[r].genre_ids}
                         </h3>
                         ${data[r].overview}
-                        <a href="${data[r].imdb_path}">IMDb</a>
+                        <a href="${data[r].imdb_path}" target="_blank">IMDb</a>
+                        <div class="providers">
+                `;
+                for (var provider in data[r].providers){
+                    console.log(data[r].providers[provider].provider_name)
+                    output += `
+                        <img src="${data[r].providers[provider].logo_path}" alt="${data[r].providers[provider].provider_name}"></img>
+                    `;
+                }
+
+                output += `
+                        </div>
                     </div>
                 </div>
                 `;
@@ -77,7 +88,7 @@ function getR(e){
                             Error: Invalid Input
                         </h2>
                         <div>
-                            Please try again. (Remember to allow CORS)
+                            "${title}" is not valid input.
                         </div>
                         Example: Shrek, Harry Potter, Rush Hour,...
                     </div>
