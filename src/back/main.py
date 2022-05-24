@@ -4,6 +4,7 @@ import pandas as pd
 from typing import Optional
 import requests
 
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
