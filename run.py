@@ -9,9 +9,9 @@ R_PORT = random.randint(8001, 9000)     # :D
 
 # Make sure that code elsewhere reflects these values
 BACK_PORT = 8000
-BACK_IP = "0.0.0.0"    # SET THIS TO DEVICE IP, THEN SAME TO src/front/includes/script.js
+BACK_IP = "172.16.210.254"    # SET THIS TO DEVICE IP, THEN SAME TO src/front/includes/script.js
 FRONT_PORT = R_PORT
-FRONT_IP = "0.0.0.0"
+FRONT_IP = ""
 
 def runBack():
     uvicorn.run("src.back.main:app", host=BACK_IP, port=BACK_PORT, log_level="info")

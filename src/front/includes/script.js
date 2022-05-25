@@ -23,7 +23,7 @@ function getR(e){
     document.getElementById('loading__element').style = "display: flex;";
 
     // !!! MAKE SURE THIS LINE IS CORRECT !!!
-    fetch(`http://0.0.0.0:8000/recommendation/${title}`, { //fetch the recommendations for "title"
+    fetch(`http://172.16.210.254:8000/recommendation/${title}`, { //fetch the recommendations for "title"
         method: "GET",
     })
         .then(response => {
