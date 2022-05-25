@@ -9,7 +9,7 @@ R_PORT = random.randint(8001, 9000)     # :D
 
 # Make sure that code elsewhere reflects these values
 BACK_PORT = 8000
-BACK_IP = "xxx.xxx.xx.xx"    # SET THIS TO DEVICE IP, THEN SAME TO src/front/includes/script.js
+BACK_IP = "0.0.0.0"    # SET THIS TO DEVICE IP, THEN SAME TO src/front/includes/script.js
 FRONT_PORT = R_PORT
 FRONT_IP = "0.0.0.0"
 
