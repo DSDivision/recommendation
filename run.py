@@ -24,7 +24,7 @@ def runFront():
     # Set this to true if you want to use a single port. Creates UB
     socketserver.TCPServer.allow_reuse_address = False
     with socketserver.TCPServer((FRONT_IP, FRONT_PORT), handler) as httpd:
-        print("Server started at: " + FRONT_IP + str(FRONT_PORT))
+        print("Frontend application started at: " + FRONT_IP + ":" + str(FRONT_PORT))
         httpd.serve_forever()
 
 
