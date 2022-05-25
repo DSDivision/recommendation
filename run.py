@@ -9,7 +9,7 @@ R_PORT = random.randint(8001, 9000)     # :D
 
 # Make sure that code elsewhere reflects these values
 BACK_PORT = 8000
-BACK_IP = "xxx.xxx.xx.xx"    # SET THIS TO DEVICE IP, THEN SAME TO src/front/includes/script.js
+BACK_IP = "0.0.0.0"    # SET THIS TO DEVICE IP, THEN SAME TO src/front/includes/script.js
 FRONT_PORT = R_PORT
 FRONT_IP = "0.0.0.0"
 
@@ -24,7 +24,7 @@ def runFront():
     # Set this to true if you want to use a single port. Creates UB
     socketserver.TCPServer.allow_reuse_address = False
     with socketserver.TCPServer((FRONT_IP, FRONT_PORT), handler) as httpd:
-        print("Server started at: " + FRONT_IP + str(FRONT_PORT))
+        print("Frontend application started at: " + FRONT_IP + ":" + str(FRONT_PORT))
         httpd.serve_forever()
 
 
