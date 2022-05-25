@@ -61,13 +61,13 @@ async def recommendation(title: str = Path(None, description="Title of the basis
     results.insert(0,movie_found)
     for movie in results:
         movie['poster_path'] = 'https://image.tmdb.org/t/p/original' + movie['poster_path']
-
+        id=movie['id']
         imdb_id = requests.get(
-            f'https://api.themoviedb.org/3/movie/{movie_id}',
+            f'https://api.themoviedb.org/3/movie/{id}',
             params=recommendation_payload,
             timeout=10).json()['imdb_id']
         movie['imdb_path'] = 'https://www.imdb.com/title/' + imdb_id
-        id=movie['id']
+        
         providers = requests.get(
             f'https://api.themoviedb.org/3/movie/{id}/watch/providers?api_key={api_key}',
             timeout=10).json()['results']
